@@ -1,0 +1,1759 @@
+- dashboard: motors_autos_y_camionetas__autos_de_coleccin
+  title: 'MOTORS: Autos y Camionetas + Autos de Colección'
+  layout: newspaper
+  preferred_viewer: dashboards-next
+  crossfilter_enabled: true
+  description: ''
+  filters_location_top: false
+  preferred_slug: CcTsDnZT9IGgUnovGPk8DY
+  elements:
+  - title: 'Evolución mensual: Usado y 0km'
+    name: 'Evolución mensual: Usado y 0km'
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.year_month_month, extended_dash_motors_vibrancy.live_listings,
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique, extended_dash_motors_vibrancy.sum_visitas_total,
+      extended_dash_motors_vibrancy.vibrancy, extended_dash_motors_vibrancy.contactos_sobre_visitas,
+      extended_dash_motors_vibrancy.item_condition]
+    pivots: [extended_dash_motors_vibrancy.item_condition]
+    fill_fields: [extended_dash_motors_vibrancy.year_month_month]
+    filters:
+      extended_dash_motors_vibrancy.year_month_month: 13 months
+    sorts: [extended_dash_motors_vibrancy.year_month_month desc, extended_dash_motors_vibrancy.item_condition]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 5
+    col: 0
+    width: 24
+    height: 9
+  - name: 'Top Marca y Modelo: Usados y 0km - Order by Live Listings'
+    type: text
+    title_text: 'Top Marca y Modelo: Usados y 0km - Order by Live Listings'
+    subtitle_text: Para elegir por qué ordenar posicionarse sobre la métrica que se
+      desee y cliquear
+    body_text: ''
+    row: 22
+    col: 0
+    width: 24
+    height: 2
+  - title: 'Evolución por Q: Usados y 0km'
+    name: 'Evolución por Q: Usados y 0km'
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.year_month_quarter,
+      extended_dash_motors_vibrancy.item_condition]
+    pivots: [extended_dash_motors_vibrancy.item_condition]
+    fill_fields: [extended_dash_motors_vibrancy.year_month_quarter]
+    filters:
+      extended_dash_motors_vibrancy.year_month_quarter: 5 quarters
+    sorts: [extended_dash_motors_vibrancy.item_condition, extended_dash_motors_vibrancy.year_month_quarter
+        desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 16
+    col: 0
+    width: 24
+    height: 6
+  - name: Evolución mensual últimos 13 meses
+    type: text
+    title_text: Evolución mensual últimos 13 meses
+    subtitle_text: 'Tip: se puede utilizar los filtros para hacer la evolución de
+      lo que se desee. Ejemplo FUEL TYPE = Eléctrico'
+    body_text: ''
+    row: 3
+    col: 0
+    width: 24
+    height: 2
+  - name: Evolución por trimestre
+    type: text
+    title_text: Evolución por trimestre
+    subtitle_text: 'Tip: se puede utilizar los filtros para hacer la evolución de
+      lo que se desee. Ejemplo ITEM STATE = Capital Federal'
+    body_text: ''
+    row: 14
+    col: 0
+    width: 24
+    height: 2
+  - title: Marca
+    name: Marca
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.item_condition,
+      extended_dash_motors_vibrancy.brand]
+    pivots: [extended_dash_motors_vibrancy.item_condition]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.item_condition, extended_dash_motors_vibrancy.live_listings
+        desc 0]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 24
+    col: 0
+    width: 24
+    height: 8
+  - name: Evolución de precios
+    type: text
+    title_text: Evolución de precios
+    subtitle_text: 'Tip: se puede utilizar los filtros para hacer la evolución de
+      lo que se desee. Ejemplo BRAND = Chevrolet'
+    body_text: ''
+    row: 40
+    col: 0
+    width: 24
+    height: 2
+  - title: Evolución de precios - Usados y 0km - Local currency y USD
+    name: Evolución de precios - Usados y 0km - Local currency y USD
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.year_month_month, extended_dash_motors_vibrancy.item_condition,
+      extended_dash_motors_vibrancy.item_local_price_percentil_10, extended_dash_motors_vibrancy.item_local_price_percentil_25,
+      extended_dash_motors_vibrancy.item_local_price_average, extended_dash_motors_vibrancy.item_local_price_percentil_50,
+      extended_dash_motors_vibrancy.item_local_price_percentil_75, extended_dash_motors_vibrancy.item_local_price_percentil_90,
+      extended_dash_motors_vibrancy.item_usd_price_percentil_10, extended_dash_motors_vibrancy.item_usd_price_percentil_25,
+      extended_dash_motors_vibrancy.item_usd_price_average, extended_dash_motors_vibrancy.item_usd_price_percentil_50,
+      extended_dash_motors_vibrancy.item_usd_price_percentil_75, extended_dash_motors_vibrancy.item_usd_price_percentil_90]
+    pivots: [extended_dash_motors_vibrancy.item_condition]
+    fill_fields: [extended_dash_motors_vibrancy.year_month_month]
+    filters:
+      extended_dash_motors_vibrancy.year_month_month: 13 months
+    sorts: [extended_dash_motors_vibrancy.year_month_month desc, extended_dash_motors_vibrancy.item_condition]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+      extended_dash_motors_vibrancy.item_local_price_percentil_10:
+        is_active: true
+      extended_dash_motors_vibrancy.item_local_price_percentil_25:
+        is_active: true
+      extended_dash_motors_vibrancy.item_local_price_average:
+        is_active: true
+      extended_dash_motors_vibrancy.item_local_price_percentil_50:
+        is_active: true
+      extended_dash_motors_vibrancy.item_local_price_percentil_75:
+        is_active: true
+      extended_dash_motors_vibrancy.item_local_price_percentil_90:
+        is_active: true
+      extended_dash_motors_vibrancy.item_usd_price_percentil_10:
+        is_active: true
+      extended_dash_motors_vibrancy.item_usd_price_percentil_25:
+        is_active: true
+      extended_dash_motors_vibrancy.item_usd_price_average:
+        is_active: true
+      extended_dash_motors_vibrancy.item_usd_price_percentil_50:
+        is_active: true
+      extended_dash_motors_vibrancy.item_usd_price_percentil_75:
+        is_active: true
+      extended_dash_motors_vibrancy.item_usd_price_percentil_90:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 42
+    col: 0
+    width: 24
+    height: 9
+  - title: Evolución de precios - Usados y 0km - Local currency y USD
+    name: Evolución de precios - Usados y 0km - Local currency y USD (2)
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.item_condition, extended_dash_motors_vibrancy.item_local_price_percentil_10,
+      extended_dash_motors_vibrancy.item_local_price_percentil_25, extended_dash_motors_vibrancy.item_local_price_average,
+      extended_dash_motors_vibrancy.item_local_price_percentil_50, extended_dash_motors_vibrancy.item_local_price_percentil_75,
+      extended_dash_motors_vibrancy.item_local_price_percentil_90, extended_dash_motors_vibrancy.item_usd_price_percentil_10,
+      extended_dash_motors_vibrancy.item_usd_price_percentil_25, extended_dash_motors_vibrancy.item_usd_price_average,
+      extended_dash_motors_vibrancy.item_usd_price_percentil_50, extended_dash_motors_vibrancy.item_usd_price_percentil_75,
+      extended_dash_motors_vibrancy.item_usd_price_percentil_90, extended_dash_motors_vibrancy.year_month_quarter]
+    pivots: [extended_dash_motors_vibrancy.item_condition]
+    fill_fields: [extended_dash_motors_vibrancy.year_month_quarter]
+    filters:
+      extended_dash_motors_vibrancy.year_month_quarter: 5 quarters
+    sorts: [extended_dash_motors_vibrancy.item_condition, extended_dash_motors_vibrancy.year_month_quarter
+        desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+      extended_dash_motors_vibrancy.item_local_price_percentil_10:
+        is_active: true
+      extended_dash_motors_vibrancy.item_local_price_percentil_25:
+        is_active: true
+      extended_dash_motors_vibrancy.item_local_price_average:
+        is_active: true
+      extended_dash_motors_vibrancy.item_local_price_percentil_50:
+        is_active: true
+      extended_dash_motors_vibrancy.item_local_price_percentil_75:
+        is_active: true
+      extended_dash_motors_vibrancy.item_local_price_percentil_90:
+        is_active: true
+      extended_dash_motors_vibrancy.item_usd_price_percentil_10:
+        is_active: true
+      extended_dash_motors_vibrancy.item_usd_price_percentil_25:
+        is_active: true
+      extended_dash_motors_vibrancy.item_usd_price_average:
+        is_active: true
+      extended_dash_motors_vibrancy.item_usd_price_percentil_50:
+        is_active: true
+      extended_dash_motors_vibrancy.item_usd_price_percentil_75:
+        is_active: true
+      extended_dash_motors_vibrancy.item_usd_price_percentil_90:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 51
+    col: 0
+    width: 24
+    height: 7
+  - title: Marca Modelo
+    name: Marca Modelo
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.item_condition,
+      extended_dash_motors_vibrancy.brand_model]
+    pivots: [extended_dash_motors_vibrancy.item_condition]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.item_condition, extended_dash_motors_vibrancy.live_listings
+        desc 0]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 32
+    col: 0
+    width: 24
+    height: 8
+  - name: 'Deepdive: métricas por distintas aperturas'
+    type: text
+    title_text: 'Deepdive: métricas por distintas aperturas'
+    subtitle_text: 'Tip: se puede utilizar los filtros para ver el deepdive que se
+      desee. Ejemplo ITEM CONDITION = Usado'
+    body_text: ''
+    row: 58
+    col: 0
+    width: 24
+    height: 2
+  - title: Métricas por tipo de seller
+    name: Métricas por tipo de seller
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.user_type]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.live_listings desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 60
+    col: 0
+    width: 12
+    height: 6
+  - title: Métricas por si es financiable
+    name: Métricas por si es financiable
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.is_financeable]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.live_listings desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 60
+    col: 12
+    width: 12
+    height: 6
+  - title: Métricas por tipo de combustible
+    name: Métricas por tipo de combustible
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.fuel_type]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.live_listings desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 66
+    col: 0
+    width: 12
+    height: 6
+  - title: Métricas por tipo de dirección
+    name: Métricas por tipo de dirección
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.steering]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.live_listings desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 66
+    col: 12
+    width: 12
+    height: 6
+  - title: Métricas por tipo de motor
+    name: Métricas por tipo de motor
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.engine]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.live_listings desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 72
+    col: 0
+    width: 12
+    height: 6
+  - title: Métricas por transmisión
+    name: Métricas por transmisión
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.transmission, extended_dash_motors_vibrancy.live_listings,
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique, extended_dash_motors_vibrancy.sum_visitas_total,
+      extended_dash_motors_vibrancy.vibrancy, extended_dash_motors_vibrancy.contactos_sobre_visitas]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.live_listings desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 72
+    col: 12
+    width: 12
+    height: 6
+  - title: Métricas por rango de kilómetro
+    name: Métricas por rango de kilómetro
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.kilometers_bucket]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.kilometers_bucket]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 78
+    col: 0
+    width: 12
+    height: 7
+  - title: Métricas por rango de antiguedad (incluye 0km)
+    name: Métricas por rango de antiguedad (incluye 0km)
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.antiguedad_bucket]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.live_listings desc 0]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 78
+    col: 12
+    width: 12
+    height: 7
+  - title: Métricas por tipo de carrocería
+    name: Métricas por tipo de carrocería
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.vehicle_body_type, extended_dash_motors_vibrancy.live_listings,
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique, extended_dash_motors_vibrancy.sum_visitas_total,
+      extended_dash_motors_vibrancy.vibrancy, extended_dash_motors_vibrancy.contactos_sobre_visitas]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.live_listings desc 0]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 85
+    col: 0
+    width: 12
+    height: 6
+  - title: Métricas por tipo de tracción
+    name: Métricas por tipo de tracción
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.traction_control]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.live_listings desc 0]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 85
+    col: 12
+    width: 12
+    height: 6
+  - title: 'Métricas por región: STATE'
+    name: 'Métricas por región: STATE'
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.item_state]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.live_listings desc 0]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 91
+    col: 0
+    width: 12
+    height: 7
+  - title: 'Métricas por región: CITY'
+    name: 'Métricas por región: CITY'
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.item_city]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.live_listings desc 0]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 91
+    col: 12
+    width: 12
+    height: 7
+  - title: 'Métricas por región: NEIGHBORHOOD'
+    name: 'Métricas por región: NEIGHBORHOOD'
+    model: meli
+    explore: dash_motors_vibrancy
+    type: looker_grid
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.sum_contactos_totales_unique,
+      extended_dash_motors_vibrancy.sum_visitas_total, extended_dash_motors_vibrancy.vibrancy,
+      extended_dash_motors_vibrancy.contactos_sobre_visitas, extended_dash_motors_vibrancy.item_neighborhood]
+    filters: {}
+    sorts: [extended_dash_motors_vibrancy.live_listings desc 0]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_column_widths:
+      extended_dash_motors_vibrancy.brand: 168.45000000000005
+    series_cell_visualizations:
+      extended_dash_motors_vibrancy.live_listings:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_motors_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_motors_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_motors_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    hidden_pivots: {}
+    series_types: {}
+    defaults_version: 1
+    listen:
+      CATEGORY NAME L2: extended_dash_motors_vibrancy.category_name_l2
+      ITEM CONDITION: extended_dash_motors_vibrancy.item_condition
+      SITE ID: extended_dash_motors_vibrancy.site_id
+      YEAR MONTH Month: extended_dash_motors_vibrancy.year_month_month
+      FUEL TYPE: extended_dash_motors_vibrancy.fuel_type
+      USER TYPE: extended_dash_motors_vibrancy.user_type
+      KILOMETERS BUCKET: extended_dash_motors_vibrancy.kilometers_bucket
+      ANTIGUEDAD BUCKET: extended_dash_motors_vibrancy.antiguedad_bucket
+      VEHICLE BODY TYPE: extended_dash_motors_vibrancy.vehicle_body_type
+      ITEM STATE: extended_dash_motors_vibrancy.item_state
+      ITEM CITY: extended_dash_motors_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_motors_vibrancy.item_neighborhood
+      BRAND: extended_dash_motors_vibrancy.brand
+      MODEL: extended_dash_motors_vibrancy.brand_model
+      IS FINANCEABLE: extended_dash_motors_vibrancy.is_financeable
+      STEERING: extended_dash_motors_vibrancy.steering
+      ENGINE: extended_dash_motors_vibrancy.engine
+      TRANSMISSION: extended_dash_motors_vibrancy.transmission
+      TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
+    row: 98
+    col: 0
+    width: 12
+    height: 7
+  - name: ''
+    type: text
+    title_text: ''
+    subtitle_text: ''
+    body_text: '[{"type":"h1","children":[{"text":"Filtros","bold":true,"underline":true,"color":"hsl(0,
+      0%, 11%)"}],"align":"center"},{"type":"h2","align":"center","id":1678366947762,"children":[{"text":"Se
+      pueden usar los filtros de la derecha o cliquear en los graficos para filtrar
+      lo que se desee","color":"hsl(0, 0%, 11%)"}]},{"type":"h2","id":1678367306272,"children":[{"text":"En
+      caso de que el dashboard no tenga la visualización deseada, se puede "},{"type":"a","url":"https://meli.looker.com/explore/meli/dash_motors_vibrancy?toggle=fil&qid=42RVNnbemrgbWyFhsyxDBv","children":[{"text":"crear
+      una propia a partir del siguiente explore"}],"id":1680450060426},{"text":""}],"align":"center"}]'
+    rich_content_json: '{"format":"slate"}'
+    row: 0
+    col: 0
+    width: 24
+    height: 3
+  filters:
+  - name: SITE ID
+    title: SITE ID
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: true
+    ui_config:
+      type: dropdown_menu
+      display: inline
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [YEAR MONTH Month]
+    field: extended_dash_motors_vibrancy.site_id
+  - name: YEAR MONTH Month
+    title: YEAR MONTH Month
+    type: field_filter
+    default_value: 2 month
+    allow_multiple_values: true
+    required: true
+    ui_config:
+      type: advanced
+      display: popover
+      options: []
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: []
+    field: extended_dash_motors_vibrancy.year_month_month
+  - name: CATEGORY NAME L2
+    title: CATEGORY NAME L2
+    type: field_filter
+    default_value: Autos de Colección,Autos y Camionetas,Carros Antigos,Carros de
+      Colección,Carros e Caminhonetes,Carros y Camionetas
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: advanced
+      display: popover
+      options: []
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month]
+    field: extended_dash_motors_vibrancy.category_name_l2
+  - name: ITEM CONDITION
+    title: ITEM CONDITION
+    type: field_filter
+    default_value: Novo,Nuevo,Usado
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: advanced
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month]
+    field: extended_dash_motors_vibrancy.item_condition
+  - name: FUEL TYPE
+    title: FUEL TYPE
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month, CATEGORY NAME L2]
+    field: extended_dash_motors_vibrancy.fuel_type
+  - name: USER TYPE
+    title: USER TYPE
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month]
+    field: extended_dash_motors_vibrancy.user_type
+  - name: KILOMETERS BUCKET
+    title: KILOMETERS BUCKET
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month, CATEGORY NAME L2]
+    field: extended_dash_motors_vibrancy.kilometers_bucket
+  - name: ANTIGUEDAD BUCKET
+    title: ANTIGUEDAD BUCKET
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month, CATEGORY NAME L2]
+    field: extended_dash_motors_vibrancy.antiguedad_bucket
+  - name: VEHICLE BODY TYPE
+    title: VEHICLE BODY TYPE
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month]
+    field: extended_dash_motors_vibrancy.vehicle_body_type
+  - name: ITEM STATE
+    title: ITEM STATE
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month]
+    field: extended_dash_motors_vibrancy.item_state
+  - name: ITEM CITY
+    title: ITEM CITY
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month]
+    field: extended_dash_motors_vibrancy.item_city
+  - name: ITEM NEIGHBORHOOD
+    title: ITEM NEIGHBORHOOD
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month]
+    field: extended_dash_motors_vibrancy.item_neighborhood
+  - name: BRAND
+    title: BRAND
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month, CATEGORY NAME L2]
+    field: extended_dash_motors_vibrancy.brand
+  - name: MODEL
+    title: MODEL
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month, CATEGORY NAME L2]
+    field: extended_dash_motors_vibrancy.brand_model
+  - name: IS FINANCEABLE
+    title: IS FINANCEABLE
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: button_group
+      display: inline
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month, CATEGORY NAME L2]
+    field: extended_dash_motors_vibrancy.is_financeable
+  - name: STEERING
+    title: STEERING
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month, CATEGORY NAME L2]
+    field: extended_dash_motors_vibrancy.steering
+  - name: ENGINE
+    title: ENGINE
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month, CATEGORY NAME L2]
+    field: extended_dash_motors_vibrancy.engine
+  - name: TRANSMISSION
+    title: TRANSMISSION
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month, CATEGORY NAME L2]
+    field: extended_dash_motors_vibrancy.transmission
+  - name: TRACTION CONTROL
+    title: TRACTION CONTROL
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, YEAR MONTH Month, CATEGORY NAME L2]
+    field: extended_dash_motors_vibrancy.traction_control
