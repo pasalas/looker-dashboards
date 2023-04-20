@@ -1,0 +1,1267 @@
+- dashboard: alquiler_departamentos_y_casas
+  title: 'Alquiler: Departamentos y Casas'
+  layout: newspaper
+  preferred_viewer: dashboards-next
+  crossfilter_enabled: true
+  description: ''
+  filters_location_top: false
+  preferred_slug: ycDZBRYN5ZXANeEnJBGFAW
+  elements:
+  - title: 'Evolución mensual: tipo de propiedad'
+    name: 'Evolución mensual: tipo de propiedad'
+    model: meli
+    explore: dash_real_estate_vibrancy
+    type: looker_grid
+    fields: [extended_dash_real_estate_vibrancy.year_month_month, extended_dash_real_estate_vibrancy.live_listings,
+      extended_dash_real_estate_vibrancy.sum_contactos_totales_unique, extended_dash_real_estate_vibrancy.sum_visitas_total,
+      extended_dash_real_estate_vibrancy.vibrancy, extended_dash_real_estate_vibrancy.contactos_sobre_visitas,
+      extended_dash_real_estate_vibrancy.property_type]
+    pivots: [extended_dash_real_estate_vibrancy.property_type]
+    fill_fields: [extended_dash_real_estate_vibrancy.year_month_month]
+    filters: {}
+    sorts: [extended_dash_real_estate_vibrancy.year_month_month desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_real_estate_vibrancy.live_listings:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_real_estate_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_real_estate_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: true
+    interpolation: linear
+    defaults_version: 1
+    series_types: {}
+    hidden_pivots: {}
+    listen:
+      OPERATION: extended_dash_real_estate_vibrancy.operation
+      CUSTOM ITEM STATE: extended_dash_real_estate_vibrancy.custom_item_state
+      ITEM STATE: extended_dash_real_estate_vibrancy.item_state
+      ITEM CITY: extended_dash_real_estate_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_real_estate_vibrancy.item_neighborhood
+      COMBO: extended_dash_real_estate_vibrancy.combo
+      'BUCKET: ROOMS': extended_dash_real_estate_vibrancy.bucket_rooms
+      'BUCKET: BEDROOMS': extended_dash_real_estate_vibrancy.bucket_bedrooms
+      'BUCKET: FULL BATHROOMS': extended_dash_real_estate_vibrancy.bucket_full_bathrooms
+      'BUCKET: PARKING LOTS': extended_dash_real_estate_vibrancy.bucket_parking_lots
+      ES FINANCIABLE: extended_dash_real_estate_vibrancy.es_financiable
+      TIER: extended_dash_real_estate_vibrancy.tier
+      USER TYPE: extended_dash_real_estate_vibrancy.user_type
+      CUSTOMER SELLER ID: extended_dash_real_estate_vibrancy.customer_seller_id
+      WITH VIRTUAL TOUR: extended_dash_real_estate_vibrancy.with_virtual_tour
+      PROPERTY TYPE: extended_dash_real_estate_vibrancy.property_type
+      SITE ID: extended_dash_real_estate_vibrancy.site_id
+      Year Month - Month: extended_dash_real_estate_vibrancy.year_month_month
+    row: 3
+    col: 0
+    width: 24
+    height: 9
+  - title: 'Evolución mensual: habitaciones'
+    name: 'Evolución mensual: habitaciones'
+    model: meli
+    explore: dash_real_estate_vibrancy
+    type: looker_grid
+    fields: [extended_dash_real_estate_vibrancy.year_month_month, extended_dash_real_estate_vibrancy.live_listings,
+      extended_dash_real_estate_vibrancy.sum_contactos_totales_unique, extended_dash_real_estate_vibrancy.sum_visitas_total,
+      extended_dash_real_estate_vibrancy.vibrancy, extended_dash_real_estate_vibrancy.contactos_sobre_visitas,
+      extended_dash_real_estate_vibrancy.bucket_bedrooms, extended_dash_real_estate_vibrancy.property_type]
+    pivots: [extended_dash_real_estate_vibrancy.bucket_bedrooms, extended_dash_real_estate_vibrancy.property_type]
+    fill_fields: [extended_dash_real_estate_vibrancy.year_month_month]
+    filters: {}
+    sorts: [extended_dash_real_estate_vibrancy.bucket_bedrooms, extended_dash_real_estate_vibrancy.year_month_month
+        desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_real_estate_vibrancy.live_listings:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_real_estate_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_real_estate_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: true
+    interpolation: linear
+    defaults_version: 1
+    series_types: {}
+    hidden_pivots: {}
+    listen:
+      OPERATION: extended_dash_real_estate_vibrancy.operation
+      CUSTOM ITEM STATE: extended_dash_real_estate_vibrancy.custom_item_state
+      ITEM STATE: extended_dash_real_estate_vibrancy.item_state
+      ITEM CITY: extended_dash_real_estate_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_real_estate_vibrancy.item_neighborhood
+      COMBO: extended_dash_real_estate_vibrancy.combo
+      'BUCKET: ROOMS': extended_dash_real_estate_vibrancy.bucket_rooms
+      'BUCKET: BEDROOMS': extended_dash_real_estate_vibrancy.bucket_bedrooms
+      'BUCKET: FULL BATHROOMS': extended_dash_real_estate_vibrancy.bucket_full_bathrooms
+      'BUCKET: PARKING LOTS': extended_dash_real_estate_vibrancy.bucket_parking_lots
+      ES FINANCIABLE: extended_dash_real_estate_vibrancy.es_financiable
+      TIER: extended_dash_real_estate_vibrancy.tier
+      USER TYPE: extended_dash_real_estate_vibrancy.user_type
+      CUSTOMER SELLER ID: extended_dash_real_estate_vibrancy.customer_seller_id
+      WITH VIRTUAL TOUR: extended_dash_real_estate_vibrancy.with_virtual_tour
+      PROPERTY TYPE: extended_dash_real_estate_vibrancy.property_type
+      SITE ID: extended_dash_real_estate_vibrancy.site_id
+      Year Month - Month: extended_dash_real_estate_vibrancy.year_month_month
+    row: 12
+    col: 0
+    width: 24
+    height: 10
+  - name: ''
+    type: text
+    title_text: ''
+    subtitle_text: ''
+    body_text: '[{"type":"h1","children":[{"text":"Filtros","bold":true,"underline":true,"color":"hsl(0,
+      0%, 11%)"}],"align":"center","id":1678369594310},{"type":"h2","align":"center","children":[{"text":"Se
+      pueden usar los filtros de la derecha o cliquear en los graficos para filtrar
+      lo que se desee","color":"hsl(0, 0%, 11%)"}],"id":1678369594310},{"type":"h2","children":[{"text":"En
+      caso de que el dashboard no tenga la visualización deseada, se puede "},{"type":"a","url":"https://meli.looker.com/explore/meli/dash_real_estate_vibrancy","children":[{"text":"crear
+      una propia a partir del siguiente explore"}],"id":1681305802431},{"text":""}],"align":"center","id":1678369594310}]'
+    rich_content_json: '{"format":"slate"}'
+    row: 0
+    col: 0
+    width: 24
+    height: 3
+  - title: 'Evolución mensual: góndola segun currency de la publicación'
+    name: 'Evolución mensual: góndola segun currency de la publicación'
+    model: meli
+    explore: dash_real_estate_vibrancy
+    type: looker_grid
+    fields: [extended_dash_real_estate_vibrancy.year_month_month, extended_dash_real_estate_vibrancy.live_listings,
+      extended_dash_real_estate_vibrancy.site_currency_id, extended_dash_real_estate_vibrancy.property_type]
+    pivots: [extended_dash_real_estate_vibrancy.site_currency_id, extended_dash_real_estate_vibrancy.property_type]
+    fill_fields: [extended_dash_real_estate_vibrancy.year_month_month]
+    filters: {}
+    sorts: [extended_dash_real_estate_vibrancy.site_currency_id, extended_dash_real_estate_vibrancy.year_month_month
+        desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_real_estate_vibrancy.live_listings:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_real_estate_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_real_estate_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: true
+    interpolation: linear
+    defaults_version: 1
+    series_types: {}
+    hidden_pivots: {}
+    listen:
+      OPERATION: extended_dash_real_estate_vibrancy.operation
+      CUSTOM ITEM STATE: extended_dash_real_estate_vibrancy.custom_item_state
+      ITEM STATE: extended_dash_real_estate_vibrancy.item_state
+      ITEM CITY: extended_dash_real_estate_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_real_estate_vibrancy.item_neighborhood
+      COMBO: extended_dash_real_estate_vibrancy.combo
+      'BUCKET: ROOMS': extended_dash_real_estate_vibrancy.bucket_rooms
+      'BUCKET: BEDROOMS': extended_dash_real_estate_vibrancy.bucket_bedrooms
+      'BUCKET: FULL BATHROOMS': extended_dash_real_estate_vibrancy.bucket_full_bathrooms
+      'BUCKET: PARKING LOTS': extended_dash_real_estate_vibrancy.bucket_parking_lots
+      ES FINANCIABLE: extended_dash_real_estate_vibrancy.es_financiable
+      TIER: extended_dash_real_estate_vibrancy.tier
+      USER TYPE: extended_dash_real_estate_vibrancy.user_type
+      CUSTOMER SELLER ID: extended_dash_real_estate_vibrancy.customer_seller_id
+      WITH VIRTUAL TOUR: extended_dash_real_estate_vibrancy.with_virtual_tour
+      PROPERTY TYPE: extended_dash_real_estate_vibrancy.property_type
+      SITE ID: extended_dash_real_estate_vibrancy.site_id
+      Year Month - Month: extended_dash_real_estate_vibrancy.year_month_month
+    row: 22
+    col: 0
+    width: 24
+    height: 9
+  - title: 'Evolución mensual: precios en Local Currency y USD'
+    name: 'Evolución mensual: precios en Local Currency y USD'
+    model: meli
+    explore: dash_real_estate_vibrancy
+    type: looker_grid
+    fields: [extended_dash_real_estate_vibrancy.year_month_month, extended_dash_real_estate_vibrancy.item_local_price_percentil_10,
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_25, extended_dash_real_estate_vibrancy.item_local_price_average,
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_50, extended_dash_real_estate_vibrancy.item_local_price_percentil_75,
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_90, extended_dash_real_estate_vibrancy.item_usd_price_percentil_10,
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_25, extended_dash_real_estate_vibrancy.item_usd_price_average,
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_50, extended_dash_real_estate_vibrancy.item_usd_price_percentil_75,
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_90, extended_dash_real_estate_vibrancy.property_type]
+    pivots: [extended_dash_real_estate_vibrancy.property_type]
+    fill_fields: [extended_dash_real_estate_vibrancy.year_month_month]
+    filters: {}
+    sorts: [extended_dash_real_estate_vibrancy.year_month_month desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_real_estate_vibrancy.live_listings:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_real_estate_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_real_estate_vibrancy.contactos_sobre_visitas:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_10:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_25:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_75:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_10:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_25:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_75:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_90:
+        is_active: true
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: true
+    interpolation: linear
+    defaults_version: 1
+    series_types: {}
+    listen:
+      OPERATION: extended_dash_real_estate_vibrancy.operation
+      CUSTOM ITEM STATE: extended_dash_real_estate_vibrancy.custom_item_state
+      ITEM STATE: extended_dash_real_estate_vibrancy.item_state
+      ITEM CITY: extended_dash_real_estate_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_real_estate_vibrancy.item_neighborhood
+      COMBO: extended_dash_real_estate_vibrancy.combo
+      'BUCKET: ROOMS': extended_dash_real_estate_vibrancy.bucket_rooms
+      'BUCKET: BEDROOMS': extended_dash_real_estate_vibrancy.bucket_bedrooms
+      'BUCKET: FULL BATHROOMS': extended_dash_real_estate_vibrancy.bucket_full_bathrooms
+      'BUCKET: PARKING LOTS': extended_dash_real_estate_vibrancy.bucket_parking_lots
+      ES FINANCIABLE: extended_dash_real_estate_vibrancy.es_financiable
+      TIER: extended_dash_real_estate_vibrancy.tier
+      USER TYPE: extended_dash_real_estate_vibrancy.user_type
+      CUSTOMER SELLER ID: extended_dash_real_estate_vibrancy.customer_seller_id
+      WITH VIRTUAL TOUR: extended_dash_real_estate_vibrancy.with_virtual_tour
+      PROPERTY TYPE: extended_dash_real_estate_vibrancy.property_type
+      SITE ID: extended_dash_real_estate_vibrancy.site_id
+      Year Month - Month: extended_dash_real_estate_vibrancy.year_month_month
+    row: 31
+    col: 0
+    width: 24
+    height: 9
+  - title: 'Evolución mensual: precios por m2 (área cubierta)'
+    name: 'Evolución mensual: precios por m2 (área cubierta)'
+    model: meli
+    explore: dash_real_estate_vibrancy
+    type: looker_grid
+    fields: [extended_dash_real_estate_vibrancy.year_month_month, extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_percentil_10,
+      extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_percentil_50,
+      extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_percentil_90,
+      extended_dash_real_estate_vibrancy.usd_price_per_covered_area_percentil_10,
+      extended_dash_real_estate_vibrancy.usd_price_per_covered_area_percentil_50,
+      extended_dash_real_estate_vibrancy.usd_price_per_covered_area_percentil_90,
+      extended_dash_real_estate_vibrancy.property_type]
+    pivots: [extended_dash_real_estate_vibrancy.property_type]
+    fill_fields: [extended_dash_real_estate_vibrancy.year_month_month]
+    filters: {}
+    sorts: [extended_dash_real_estate_vibrancy.year_month_month desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_real_estate_vibrancy.live_listings:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_real_estate_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_real_estate_vibrancy.contactos_sobre_visitas:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_10:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_25:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_75:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_10:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_25:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_75:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.covered_area_percentil_10:
+        is_active: true
+      extended_dash_real_estate_vibrancy.covered_area_percentil_25:
+        is_active: true
+      extended_dash_real_estate_vibrancy.covered_area_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.covered_area_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.covered_area_percentil_75:
+        is_active: true
+      extended_dash_real_estate_vibrancy.covered_area_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.total_area_percentil_10:
+        is_active: true
+      extended_dash_real_estate_vibrancy.total_area_percentil_25:
+        is_active: true
+      extended_dash_real_estate_vibrancy.total_area_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.total_area_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.total_area_percentil_75:
+        is_active: true
+      extended_dash_real_estate_vibrancy.total_area_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.usd_price_per_covered_area_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.usd_price_per_covered_area_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.usd_price_per_covered_area_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.usd_price_per_covered_area_percentil_10:
+        is_active: true
+      extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_percentil_10:
+        is_active: true
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: true
+    interpolation: linear
+    defaults_version: 1
+    series_types: {}
+    hidden_pivots: {}
+    series_column_widths:
+      Venta_extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_percentil_10: 264
+    listen:
+      OPERATION: extended_dash_real_estate_vibrancy.operation
+      CUSTOM ITEM STATE: extended_dash_real_estate_vibrancy.custom_item_state
+      ITEM STATE: extended_dash_real_estate_vibrancy.item_state
+      ITEM CITY: extended_dash_real_estate_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_real_estate_vibrancy.item_neighborhood
+      COMBO: extended_dash_real_estate_vibrancy.combo
+      'BUCKET: ROOMS': extended_dash_real_estate_vibrancy.bucket_rooms
+      'BUCKET: BEDROOMS': extended_dash_real_estate_vibrancy.bucket_bedrooms
+      'BUCKET: FULL BATHROOMS': extended_dash_real_estate_vibrancy.bucket_full_bathrooms
+      'BUCKET: PARKING LOTS': extended_dash_real_estate_vibrancy.bucket_parking_lots
+      ES FINANCIABLE: extended_dash_real_estate_vibrancy.es_financiable
+      TIER: extended_dash_real_estate_vibrancy.tier
+      USER TYPE: extended_dash_real_estate_vibrancy.user_type
+      CUSTOMER SELLER ID: extended_dash_real_estate_vibrancy.customer_seller_id
+      WITH VIRTUAL TOUR: extended_dash_real_estate_vibrancy.with_virtual_tour
+      PROPERTY TYPE: extended_dash_real_estate_vibrancy.property_type
+      SITE ID: extended_dash_real_estate_vibrancy.site_id
+      Year Month - Month: extended_dash_real_estate_vibrancy.year_month_month
+    row: 49
+    col: 0
+    width: 24
+    height: 9
+  - title: Composición por región estado - Últimos 2 meses
+    name: Composición por región estado - Últimos 2 meses
+    model: meli
+    explore: dash_real_estate_vibrancy
+    type: looker_grid
+    fields: [extended_dash_real_estate_vibrancy.live_listings, extended_dash_real_estate_vibrancy.sum_contactos_totales_unique,
+      extended_dash_real_estate_vibrancy.sum_visitas_total, extended_dash_real_estate_vibrancy.vibrancy,
+      extended_dash_real_estate_vibrancy.contactos_sobre_visitas, extended_dash_real_estate_vibrancy.item_state,
+      extended_dash_real_estate_vibrancy.property_type]
+    pivots: [extended_dash_real_estate_vibrancy.property_type]
+    filters:
+      extended_dash_real_estate_vibrancy.year_month_month: 2 months
+    sorts: [extended_dash_real_estate_vibrancy.live_listings desc 0]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_real_estate_vibrancy.live_listings:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_real_estate_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_real_estate_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: true
+    interpolation: linear
+    defaults_version: 1
+    series_types: {}
+    hidden_pivots: {}
+    listen:
+      OPERATION: extended_dash_real_estate_vibrancy.operation
+      CUSTOM ITEM STATE: extended_dash_real_estate_vibrancy.custom_item_state
+      ITEM STATE: extended_dash_real_estate_vibrancy.item_state
+      ITEM CITY: extended_dash_real_estate_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_real_estate_vibrancy.item_neighborhood
+      COMBO: extended_dash_real_estate_vibrancy.combo
+      'BUCKET: ROOMS': extended_dash_real_estate_vibrancy.bucket_rooms
+      'BUCKET: BEDROOMS': extended_dash_real_estate_vibrancy.bucket_bedrooms
+      'BUCKET: FULL BATHROOMS': extended_dash_real_estate_vibrancy.bucket_full_bathrooms
+      'BUCKET: PARKING LOTS': extended_dash_real_estate_vibrancy.bucket_parking_lots
+      ES FINANCIABLE: extended_dash_real_estate_vibrancy.es_financiable
+      TIER: extended_dash_real_estate_vibrancy.tier
+      USER TYPE: extended_dash_real_estate_vibrancy.user_type
+      CUSTOMER SELLER ID: extended_dash_real_estate_vibrancy.customer_seller_id
+      WITH VIRTUAL TOUR: extended_dash_real_estate_vibrancy.with_virtual_tour
+      PROPERTY TYPE: extended_dash_real_estate_vibrancy.property_type
+      SITE ID: extended_dash_real_estate_vibrancy.site_id
+    row: 58
+    col: 0
+    width: 24
+    height: 9
+  - title: Composición por vecindario - Últimos 2 meses
+    name: Composición por vecindario - Últimos 2 meses
+    model: meli
+    explore: dash_real_estate_vibrancy
+    type: looker_grid
+    fields: [extended_dash_real_estate_vibrancy.live_listings, extended_dash_real_estate_vibrancy.sum_contactos_totales_unique,
+      extended_dash_real_estate_vibrancy.sum_visitas_total, extended_dash_real_estate_vibrancy.vibrancy,
+      extended_dash_real_estate_vibrancy.contactos_sobre_visitas, extended_dash_real_estate_vibrancy.property_type,
+      extended_dash_real_estate_vibrancy.item_neighborhood]
+    pivots: [extended_dash_real_estate_vibrancy.property_type]
+    filters:
+      extended_dash_real_estate_vibrancy.year_month_month: 2 months
+    sorts: [extended_dash_real_estate_vibrancy.property_type, extended_dash_real_estate_vibrancy.live_listings
+        desc 0]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_real_estate_vibrancy.live_listings:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_real_estate_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_real_estate_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: true
+    interpolation: linear
+    defaults_version: 1
+    series_types: {}
+    hidden_pivots: {}
+    listen:
+      OPERATION: extended_dash_real_estate_vibrancy.operation
+      CUSTOM ITEM STATE: extended_dash_real_estate_vibrancy.custom_item_state
+      ITEM STATE: extended_dash_real_estate_vibrancy.item_state
+      ITEM CITY: extended_dash_real_estate_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_real_estate_vibrancy.item_neighborhood
+      COMBO: extended_dash_real_estate_vibrancy.combo
+      'BUCKET: ROOMS': extended_dash_real_estate_vibrancy.bucket_rooms
+      'BUCKET: BEDROOMS': extended_dash_real_estate_vibrancy.bucket_bedrooms
+      'BUCKET: FULL BATHROOMS': extended_dash_real_estate_vibrancy.bucket_full_bathrooms
+      'BUCKET: PARKING LOTS': extended_dash_real_estate_vibrancy.bucket_parking_lots
+      ES FINANCIABLE: extended_dash_real_estate_vibrancy.es_financiable
+      TIER: extended_dash_real_estate_vibrancy.tier
+      USER TYPE: extended_dash_real_estate_vibrancy.user_type
+      CUSTOMER SELLER ID: extended_dash_real_estate_vibrancy.customer_seller_id
+      WITH VIRTUAL TOUR: extended_dash_real_estate_vibrancy.with_virtual_tour
+      PROPERTY TYPE: extended_dash_real_estate_vibrancy.property_type
+      SITE ID: extended_dash_real_estate_vibrancy.site_id
+    row: 76
+    col: 0
+    width: 24
+    height: 9
+  - title: Composición por ciudad - Últimos 2 meses
+    name: Composición por ciudad - Últimos 2 meses
+    model: meli
+    explore: dash_real_estate_vibrancy
+    type: looker_grid
+    fields: [extended_dash_real_estate_vibrancy.live_listings, extended_dash_real_estate_vibrancy.sum_contactos_totales_unique,
+      extended_dash_real_estate_vibrancy.sum_visitas_total, extended_dash_real_estate_vibrancy.vibrancy,
+      extended_dash_real_estate_vibrancy.contactos_sobre_visitas, extended_dash_real_estate_vibrancy.property_type,
+      extended_dash_real_estate_vibrancy.item_city]
+    pivots: [extended_dash_real_estate_vibrancy.property_type]
+    filters:
+      extended_dash_real_estate_vibrancy.year_month_month: 2 months
+    sorts: [extended_dash_real_estate_vibrancy.property_type, extended_dash_real_estate_vibrancy.live_listings
+        desc 0]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_real_estate_vibrancy.live_listings:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_real_estate_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_real_estate_vibrancy.contactos_sobre_visitas:
+        is_active: true
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: true
+    interpolation: linear
+    defaults_version: 1
+    series_types: {}
+    hidden_pivots: {}
+    listen:
+      OPERATION: extended_dash_real_estate_vibrancy.operation
+      CUSTOM ITEM STATE: extended_dash_real_estate_vibrancy.custom_item_state
+      ITEM STATE: extended_dash_real_estate_vibrancy.item_state
+      ITEM CITY: extended_dash_real_estate_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_real_estate_vibrancy.item_neighborhood
+      COMBO: extended_dash_real_estate_vibrancy.combo
+      'BUCKET: ROOMS': extended_dash_real_estate_vibrancy.bucket_rooms
+      'BUCKET: BEDROOMS': extended_dash_real_estate_vibrancy.bucket_bedrooms
+      'BUCKET: FULL BATHROOMS': extended_dash_real_estate_vibrancy.bucket_full_bathrooms
+      'BUCKET: PARKING LOTS': extended_dash_real_estate_vibrancy.bucket_parking_lots
+      ES FINANCIABLE: extended_dash_real_estate_vibrancy.es_financiable
+      TIER: extended_dash_real_estate_vibrancy.tier
+      USER TYPE: extended_dash_real_estate_vibrancy.user_type
+      CUSTOMER SELLER ID: extended_dash_real_estate_vibrancy.customer_seller_id
+      WITH VIRTUAL TOUR: extended_dash_real_estate_vibrancy.with_virtual_tour
+      PROPERTY TYPE: extended_dash_real_estate_vibrancy.property_type
+      SITE ID: extended_dash_real_estate_vibrancy.site_id
+    row: 67
+    col: 0
+    width: 24
+    height: 9
+  - title: 'Evolución mensual: área total y área cubierta'
+    name: 'Evolución mensual: área total y área cubierta'
+    model: meli
+    explore: dash_real_estate_vibrancy
+    type: looker_grid
+    fields: [extended_dash_real_estate_vibrancy.year_month_month, extended_dash_real_estate_vibrancy.property_type,
+      extended_dash_real_estate_vibrancy.total_area_percentil_10, extended_dash_real_estate_vibrancy.total_area_percentil_50,
+      extended_dash_real_estate_vibrancy.total_area_percentil_90, extended_dash_real_estate_vibrancy.covered_area_percentil_10,
+      extended_dash_real_estate_vibrancy.covered_area_percentil_50, extended_dash_real_estate_vibrancy.covered_area_percentil_90]
+    pivots: [extended_dash_real_estate_vibrancy.property_type]
+    fill_fields: [extended_dash_real_estate_vibrancy.year_month_month]
+    filters: {}
+    sorts: [extended_dash_real_estate_vibrancy.year_month_month desc]
+    limit: 500
+    column_limit: 50
+    query_timezone: America/Argentina/Buenos_Aires
+    show_view_names: false
+    show_row_numbers: true
+    transpose: false
+    truncate_text: true
+    hide_totals: false
+    hide_row_totals: false
+    size_to_fit: true
+    table_theme: white
+    limit_displayed_rows: false
+    enable_conditional_formatting: false
+    header_text_alignment: left
+    header_font_size: '12'
+    rows_font_size: '12'
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    show_sql_query_menu_options: false
+    show_totals: true
+    show_row_totals: true
+    truncate_header: false
+    series_cell_visualizations:
+      extended_dash_real_estate_vibrancy.live_listings:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_contactos_totales_unique:
+        is_active: true
+      extended_dash_real_estate_vibrancy.sum_visitas_total:
+        is_active: true
+      extended_dash_real_estate_vibrancy.vibrancy:
+        is_active: true
+      extended_dash_real_estate_vibrancy.contactos_sobre_visitas:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_10:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_25:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_75:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_local_price_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_10:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_25:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_75:
+        is_active: true
+      extended_dash_real_estate_vibrancy.item_usd_price_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.covered_area_percentil_10:
+        is_active: true
+      extended_dash_real_estate_vibrancy.covered_area_percentil_25:
+        is_active: true
+      extended_dash_real_estate_vibrancy.covered_area_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.covered_area_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.covered_area_percentil_75:
+        is_active: true
+      extended_dash_real_estate_vibrancy.covered_area_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.total_area_percentil_10:
+        is_active: true
+      extended_dash_real_estate_vibrancy.total_area_percentil_25:
+        is_active: true
+      extended_dash_real_estate_vibrancy.total_area_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.total_area_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.total_area_percentil_75:
+        is_active: true
+      extended_dash_real_estate_vibrancy.total_area_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.usd_price_per_covered_area_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.usd_price_per_covered_area_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.usd_price_per_covered_area_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.usd_price_per_covered_area_percentil_10:
+        is_active: true
+      extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_percentil_90:
+        is_active: true
+      extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_average:
+        is_active: true
+      extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_percentil_50:
+        is_active: true
+      extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_percentil_10:
+        is_active: true
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    trellis: ''
+    stacking: ''
+    legend_position: center
+    point_style: none
+    show_value_labels: false
+    label_density: 25
+    x_axis_scale: auto
+    y_axis_combined: true
+    show_null_points: true
+    interpolation: linear
+    defaults_version: 1
+    series_types: {}
+    hidden_pivots: {}
+    series_column_widths:
+      Venta_extended_dash_real_estate_vibrancy.local_currency_price_per_covered_area_percentil_10: 264
+    listen:
+      OPERATION: extended_dash_real_estate_vibrancy.operation
+      CUSTOM ITEM STATE: extended_dash_real_estate_vibrancy.custom_item_state
+      ITEM STATE: extended_dash_real_estate_vibrancy.item_state
+      ITEM CITY: extended_dash_real_estate_vibrancy.item_city
+      ITEM NEIGHBORHOOD: extended_dash_real_estate_vibrancy.item_neighborhood
+      COMBO: extended_dash_real_estate_vibrancy.combo
+      'BUCKET: ROOMS': extended_dash_real_estate_vibrancy.bucket_rooms
+      'BUCKET: BEDROOMS': extended_dash_real_estate_vibrancy.bucket_bedrooms
+      'BUCKET: FULL BATHROOMS': extended_dash_real_estate_vibrancy.bucket_full_bathrooms
+      'BUCKET: PARKING LOTS': extended_dash_real_estate_vibrancy.bucket_parking_lots
+      ES FINANCIABLE: extended_dash_real_estate_vibrancy.es_financiable
+      TIER: extended_dash_real_estate_vibrancy.tier
+      USER TYPE: extended_dash_real_estate_vibrancy.user_type
+      CUSTOMER SELLER ID: extended_dash_real_estate_vibrancy.customer_seller_id
+      WITH VIRTUAL TOUR: extended_dash_real_estate_vibrancy.with_virtual_tour
+      PROPERTY TYPE: extended_dash_real_estate_vibrancy.property_type
+      SITE ID: extended_dash_real_estate_vibrancy.site_id
+      Year Month - Month: extended_dash_real_estate_vibrancy.year_month_month
+    row: 40
+    col: 0
+    width: 24
+    height: 9
+  filters:
+  - name: SITE ID
+    title: SITE ID
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: true
+    ui_config:
+      type: dropdown_menu
+      display: inline
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: [OPERATION, PROPERTY TYPE]
+    field: extended_dash_real_estate_vibrancy.site_id
+  - name: OPERATION
+    title: OPERATION
+    type: field_filter
+    default_value: Alquiler,Aluguel,Arriendo,Renta
+    allow_multiple_values: true
+    required: true
+    ui_config:
+      type: advanced
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: [SITE ID, PROPERTY TYPE]
+    field: extended_dash_real_estate_vibrancy.operation
+  - name: Year Month - Month
+    title: Year Month - Month
+    type: field_filter
+    default_value: 13 month
+    allow_multiple_values: true
+    required: true
+    ui_config:
+      type: advanced
+      display: popover
+      options: []
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.year_month_month
+  - name: PROPERTY TYPE
+    title: PROPERTY TYPE
+    type: field_filter
+    default_value: Apartamento,Departamento,Casa
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: advanced
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: [SITE ID, OPERATION]
+    field: extended_dash_real_estate_vibrancy.property_type
+  - name: TIER
+    title: TIER
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.tier
+  - name: CUSTOM ITEM STATE
+    title: CUSTOM ITEM STATE
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: dropdown_menu
+      display: inline
+      options: []
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.custom_item_state
+  - name: ITEM STATE
+    title: ITEM STATE
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.item_state
+  - name: ITEM CITY
+    title: ITEM CITY
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.item_city
+  - name: ITEM NEIGHBORHOOD
+    title: ITEM NEIGHBORHOOD
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.item_neighborhood
+  - name: USER TYPE
+    title: USER TYPE
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.user_type
+  - name: COMBO
+    title: COMBO
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.combo
+  - name: 'BUCKET: ROOMS'
+    title: 'BUCKET: ROOMS'
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.bucket_rooms
+  - name: 'BUCKET: BEDROOMS'
+    title: 'BUCKET: BEDROOMS'
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.bucket_bedrooms
+  - name: 'BUCKET: FULL BATHROOMS'
+    title: 'BUCKET: FULL BATHROOMS'
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.bucket_full_bathrooms
+  - name: 'BUCKET: PARKING LOTS'
+    title: 'BUCKET: PARKING LOTS'
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.bucket_parking_lots
+  - name: WITH VIRTUAL TOUR
+    title: WITH VIRTUAL TOUR
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: dropdown_menu
+      display: inline
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.with_virtual_tour
+  - name: ES FINANCIABLE
+    title: ES FINANCIABLE
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: dropdown_menu
+      display: inline
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.es_financiable
+  - name: CUSTOMER SELLER ID
+    title: CUSTOMER SELLER ID
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_real_estate_vibrancy
+    listens_to_filters: []
+    field: extended_dash_real_estate_vibrancy.customer_seller_id
