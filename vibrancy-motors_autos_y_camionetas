@@ -76,7 +76,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 5
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 7
     col: 0
     width: 24
     height: 9
@@ -86,7 +88,7 @@
     subtitle_text: Para elegir por qué mes ordenar posicionarse sobre la columna que
       se desee y cliquear
     body_text: ''
-    row: 14
+    row: 16
     col: 0
     width: 24
     height: 2
@@ -96,7 +98,7 @@
     subtitle_text: 'Tip: se puede utilizar los filtros para hacer la evolución de
       lo que se desee. Ejemplo FUEL TYPE = Eléctrico'
     body_text: ''
-    row: 3
+    row: 5
     col: 0
     width: 24
     height: 2
@@ -169,7 +171,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 16
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 18
     col: 0
     width: 24
     height: 8
@@ -179,7 +183,7 @@
     subtitle_text: 'Tip: se puede utilizar los filtros para hacer la evolución de
       lo que se desee. Ejemplo BRAND = Chevrolet'
     body_text: ''
-    row: 82
+    row: 84
     col: 0
     width: 24
     height: 2
@@ -188,13 +192,15 @@
     model: meli
     explore: dash_motors_vibrancy
     type: looker_grid
-    fields: [extended_dash_motors_vibrancy.year_month_month, extended_dash_motors_vibrancy.item_condition,
+    fields: [extended_dash_motors_vibrancy.year_month_month, extended_dash_motors_vibrancy.item_local_price_percentil_01,
       extended_dash_motors_vibrancy.item_local_price_percentil_10, extended_dash_motors_vibrancy.item_local_price_percentil_25,
       extended_dash_motors_vibrancy.item_local_price_average, extended_dash_motors_vibrancy.item_local_price_percentil_50,
       extended_dash_motors_vibrancy.item_local_price_percentil_75, extended_dash_motors_vibrancy.item_local_price_percentil_90,
+      extended_dash_motors_vibrancy.item_local_price_percentil_99, extended_dash_motors_vibrancy.item_usd_price_percentil_01,
       extended_dash_motors_vibrancy.item_usd_price_percentil_10, extended_dash_motors_vibrancy.item_usd_price_percentil_25,
       extended_dash_motors_vibrancy.item_usd_price_average, extended_dash_motors_vibrancy.item_usd_price_percentil_50,
-      extended_dash_motors_vibrancy.item_usd_price_percentil_75, extended_dash_motors_vibrancy.item_usd_price_percentil_90]
+      extended_dash_motors_vibrancy.item_usd_price_percentil_75, extended_dash_motors_vibrancy.item_usd_price_percentil_90,
+      extended_dash_motors_vibrancy.item_usd_price_percentil_99, extended_dash_motors_vibrancy.item_condition]
     pivots: [extended_dash_motors_vibrancy.item_condition]
     fill_fields: [extended_dash_motors_vibrancy.year_month_month]
     filters:
@@ -279,7 +285,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 84
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 86
     col: 0
     width: 24
     height: 9
@@ -289,7 +297,7 @@
     subtitle_text: 'Tip: se pueden utilizar de filtros. Haciendo click se actualizaran
       los demás gráficos'
     body_text: ''
-    row: 93
+    row: 95
     col: 0
     width: 24
     height: 2
@@ -359,7 +367,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 109
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 111
     col: 0
     width: 8
     height: 5
@@ -368,7 +378,8 @@
     model: meli
     explore: dash_motors_vibrancy
     type: looker_grid
-    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.is_financeable]
+    fields: [extended_dash_motors_vibrancy.live_listings, extended_dash_motors_vibrancy.is_financeable,
+      extended_dash_motors_vibrancy.is_mercado_credit_financeable]
     filters:
       extended_dash_motors_vibrancy.year_month_month: 2 months
     sorts: [extended_dash_motors_vibrancy.live_listings desc]
@@ -429,7 +440,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 114
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 116
     col: 16
     width: 8
     height: 6
@@ -499,7 +512,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 114
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 116
     col: 8
     width: 8
     height: 6
@@ -569,7 +584,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 102
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 104
     col: 16
     width: 8
     height: 7
@@ -639,7 +656,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 120
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 122
     col: 0
     width: 8
     height: 6
@@ -709,7 +728,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 120
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 122
     col: 16
     width: 8
     height: 6
@@ -779,7 +800,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 109
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 111
     col: 16
     width: 8
     height: 5
@@ -849,7 +872,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 109
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 111
     col: 8
     width: 8
     height: 5
@@ -919,7 +944,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 114
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 116
     col: 0
     width: 8
     height: 6
@@ -989,7 +1016,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 120
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 122
     col: 8
     width: 8
     height: 6
@@ -1059,7 +1088,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 95
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 97
     col: 0
     width: 8
     height: 7
@@ -1129,7 +1160,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 95
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 97
     col: 8
     width: 8
     height: 7
@@ -1199,7 +1232,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 95
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 97
     col: 16
     width: 8
     height: 7
@@ -1207,24 +1242,26 @@
     type: text
     title_text: ''
     subtitle_text: ''
-    body_text: '[{"type":"h1","children":[{"text":"Filtros","bold":true,"underline":true,"color":"hsl(0,
-      0%, 11%)"}],"align":"center"},{"type":"h2","align":"center","id":1678366947762,"children":[{"text":"Se
-      pueden usar los filtros de la derecha o cliquear en los graficos para filtrar
-      lo que se desee","color":"hsl(0, 0%, 11%)"}]},{"type":"h2","id":1678367306272,"children":[{"text":"En
+    body_text: '[{"type":"p","children":[{"text":""}],"id":1684148546066},{"type":"h1","id":1684148221691,"children":[{"text":"Consideraciones","color":"hsl(0,
+      0%, 11%)","underline":true}]},{"type":"h2","id":1684148685764,"children":[{"color":"hsl(0,
+      0%, 11%)","text":"Se pueden usar los filtros de la derecha o cliquear en los
+      graficos para filtrar lo que se desee"}]},{"type":"h2","id":1678367306272,"children":[{"text":"En
       caso de que el dashboard no tenga la visualización deseada, se puede "},{"type":"a","url":"https://meli.looker.com/explore/meli/dash_motors_vibrancy?toggle=fil&qid=42RVNnbemrgbWyFhsyxDBv","children":[{"text":"crear
-      una propia a partir del siguiente explore"}],"id":1680450060426},{"text":""}],"align":"center"}]'
+      una propia a partir del siguiente explore"}],"id":1680450060426},{"text":""}]},{"type":"h2","id":1684148578453,"children":[{"text":""},{"type":"a","url":"https://docs.google.com/presentation/d/1cZRhSrNqSAk_le27MBfYdw5q7UrRWVShPDHXWUiRD68/edit#slide=id.g10cf1b3357b_0_2040","children":[{"text":"Link
+      a las diapositivas explicativas"}],"id":1684148768844},{"text":""}]},{"type":"h2","id":1684148746616,"children":[{"text":""},{"type":"a","url":"https://drive.google.com/drive/u/0/folders/1nhVHwb43FRr5X5XdR5V7GbEOyGxaOxkV","children":[{"text":"Link
+      a la grabación de la presentación del dash"}],"id":1684148783049},{"text":""}]},{"type":"h2","id":1684148785864,"children":[{"text":""}]},{"type":"h2","children":[{"text":""}],"id":1684148624110}]'
     rich_content_json: '{"format":"slate"}'
     row: 0
     col: 0
     width: 24
-    height: 3
+    height: 5
   - name: Top Marca Modelo - últimos 13 meses
     type: text
     title_text: Top Marca Modelo - últimos 13 meses
     subtitle_text: Para elegir por qué mes ordenar posicionarse sobre la columna que
       se desee y cliquear
     body_text: ''
-    row: 48
+    row: 50
     col: 0
     width: 24
     height: 2
@@ -1294,7 +1331,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 102
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 104
     col: 8
     width: 8
     height: 7
@@ -1364,7 +1403,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 102
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 104
     col: 0
     width: 8
     height: 7
@@ -1436,7 +1477,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 24
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 26
     col: 0
     width: 24
     height: 8
@@ -1510,7 +1553,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 32
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 34
     col: 0
     width: 24
     height: 8
@@ -1584,7 +1629,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 40
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 42
     col: 0
     width: 24
     height: 8
@@ -1658,7 +1705,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 50
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 52
     col: 0
     width: 24
     height: 8
@@ -1732,7 +1781,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 58
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 60
     col: 0
     width: 24
     height: 8
@@ -1806,7 +1857,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 66
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 68
     col: 0
     width: 24
     height: 8
@@ -1880,7 +1933,9 @@
       ENGINE: extended_dash_motors_vibrancy.engine
       TRANSMISSION: extended_dash_motors_vibrancy.transmission
       TRACTION CONTROL: extended_dash_motors_vibrancy.traction_control
-    row: 74
+      IS MERCADO CREDIT FINANCEABLE (Yes / No): extended_dash_motors_vibrancy.is_mercado_credit_financeable
+      FINANCEABLE BY: extended_dash_motors_vibrancy.financeable_by
+    row: 76
     col: 0
     width: 24
     height: 8
@@ -1906,7 +1961,7 @@
     required: true
     ui_config:
       type: dropdown_menu
-      display: popover
+      display: inline
     model: meli
     explore: dash_motors_vibrancy
     listens_to_filters: [SITE ID]
@@ -1926,19 +1981,19 @@
     explore: dash_motors_vibrancy
     listens_to_filters: [SITE ID]
     field: extended_dash_motors_vibrancy.category_name_l2
-  - name: FUEL TYPE
-    title: FUEL TYPE
+  - name: IS MERCADO CREDIT FINANCEABLE (Yes / No)
+    title: IS MERCADO CREDIT FINANCEABLE (Yes / No)
     type: field_filter
     default_value: ''
     allow_multiple_values: true
     required: false
     ui_config:
-      type: tag_list
-      display: popover
+      type: radio_buttons
+      display: inline
     model: meli
     explore: dash_motors_vibrancy
-    listens_to_filters: [SITE ID, CATEGORY NAME L2]
-    field: extended_dash_motors_vibrancy.fuel_type
+    listens_to_filters: []
+    field: extended_dash_motors_vibrancy.is_mercado_credit_financeable
   - name: USER TYPE
     title: USER TYPE
     type: field_filter
@@ -1991,6 +2046,19 @@
     explore: dash_motors_vibrancy
     listens_to_filters: [SITE ID]
     field: extended_dash_motors_vibrancy.vehicle_body_type
+  - name: FUEL TYPE
+    title: FUEL TYPE
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: [SITE ID, CATEGORY NAME L2]
+    field: extended_dash_motors_vibrancy.fuel_type
   - name: ITEM STATE
     title: ITEM STATE
     type: field_filter
@@ -2030,6 +2098,19 @@
     explore: dash_motors_vibrancy
     listens_to_filters: [SITE ID]
     field: extended_dash_motors_vibrancy.item_neighborhood
+  - name: FINANCEABLE BY
+    title: FINANCEABLE BY
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: advanced
+      display: popover
+    model: meli
+    explore: dash_motors_vibrancy
+    listens_to_filters: []
+    field: extended_dash_motors_vibrancy.financeable_by
   - name: BRAND
     title: BRAND
     type: field_filter
